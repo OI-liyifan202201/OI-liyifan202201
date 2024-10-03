@@ -16,7 +16,6 @@ if exist C:\VSc-cpp\install-ok.txt goto ainstall
 
 echo [Start] 正在下载 Vscode ...
 
-
 powershell Invoke-WebRequest -Uri \"https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-user\"  -OutFile VSC.exe
 
 echo [Success] OK
@@ -27,7 +26,7 @@ echo [INFO] 不要急，在后台安装...
 
 VSC.exe /VERYSILENT /SP-
 
-del VSC.exe
+del VSC.exe`
 
 taskkill /f /im code.exe>nul 2>nul
 
