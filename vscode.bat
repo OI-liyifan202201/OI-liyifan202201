@@ -4,9 +4,9 @@ color e3
 
 cls
 
-echo VScode C++ ◊‘∂Ø∞≤◊∞Ω≈±æ
+echo VScode C++ Ëá™Âä®ÂÆâË£ÖËÑöÊú¨
 
-echo ±æ≥Ã–Ú”… liyifan202201 ø™∑¢£¨
+echo Êú¨Á®ãÂ∫èÁî± liyifan202201 ÂºÄÂèëÔºå
 
 echo ---
 
@@ -14,19 +14,20 @@ md C:\VSc-cpp>nul 2>nul
 
 if exist C:\VSc-cpp\install-ok.txt goto ainstall
 
-echo [Start] ’˝‘⁄œ¬‘ÿ Vscode ...
+echo [Start] Ê≠£Âú®‰∏ãËΩΩ Vscode ...
+
 
 powershell Invoke-WebRequest -Uri \"https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-user\"  -OutFile VSC.exe
 
 echo [Success] OK
 
-echo [Start] ’˝‘⁄∞≤◊∞ Vscode ...
+echo [Start] Ê≠£Âú®ÂÆâË£Ö Vscode ...
 
-echo [INFO] ≤ª“™º±£¨‘⁄∫ÛÃ®∞≤◊∞...
+echo [INFO] ‰∏çË¶ÅÊÄ•ÔºåÂú®ÂêéÂè∞ÂÆâË£Ö...
 
 VSC.exe /VERYSILENT /SP-
 
-del VSC.exe`
+del VSC.exe
 
 taskkill /f /im code.exe>nul 2>nul
 
@@ -38,13 +39,13 @@ echo IAKIOI >> C:\VSc-cpp\install-ok.txt
 
 if exist C:\VSc-cpp\insMinGW-ok.txt goto binstall
 
-echo [Start] ’˝‘⁄œ¬‘ÿ MinGW64
+echo [Start] Ê≠£Âú®‰∏ãËΩΩ MinGW64
 
 powershell Invoke-WebRequest -Uri \"https://github.moeyy.xyz/https://github.com/Github-liyifan202201/Github-liyifan202201/releases/download/v1.0/MinGW-64.zip\"  -OutFile MinGW.zip
 
 echo [Success] OK
 
-echo [Start] ’˝‘⁄Ω‚—π MinGW64
+echo [Start] Ê≠£Âú®Ëß£Âéã MinGW64
 
 powershell Expand-Archive -Path MinGW.zip -DestinationPath C:\VSc-cpp\MinGW\
 
@@ -56,7 +57,7 @@ del MinGW.zip>nul 2>nul
 
 
 
-echo [Start] ’˝‘⁄…Ë÷√ path
+echo [Start] Ê≠£Âú®ËÆæÁΩÆ path
 
 for /f "tokens=2,*" %%A in ('reg query HKCU\Environment /v PATH 2^>nul') do set my_user_path=%%B
 
@@ -118,28 +119,28 @@ goto main
 
 :binstall
 
-echo [Start] ’˝‘⁄…Ë÷√≤Âº˛
-echo [INFO] ’˝‘⁄∞≤◊∞VScode≤Âº˛£∫∫∫ªØ
+echo [Start] Ê≠£Âú®ËÆæÁΩÆÊèí‰ª∂
+echo [INFO] Ê≠£Âú®ÂÆâË£ÖVScodeÊèí‰ª∂ÔºöÊ±âÂåñ
 start /wait /b powershell code --install-extension MS-CEINTL.vscode-language-pack-zh-hans>nul 2>nul
 
 echo { "locale": "zh-cn", "enable-crash-reporter": false} > %USERPROFILE%\.vscode\argv.json
 
-echo [INFO] ’˝‘⁄∞≤◊∞VScode≤Âº˛£∫C++
+echo [INFO] Ê≠£Âú®ÂÆâË£ÖVScodeÊèí‰ª∂ÔºöC++
 start /wait /b powershell code --install-extension ms-vscode.cpptools-extension-pack>nul 2>nul
 start /wait /b powershell code --install-extension ms-vscode.cpptools>nul 2>nul
-echo [INFO] ’˝‘⁄∞≤◊∞VScode≤Âº˛£∫¬Âπ»
+echo [INFO] Ê≠£Âú®ÂÆâË£ÖVScodeÊèí‰ª∂ÔºöÊ¥õË∞∑
 start /wait /b powershell code --install-extension yltx.vscode-luogu>nul 2>nul
-echo [INFO] ’˝‘⁄∞≤◊∞VScode≤Âº˛£∫cph
+echo [INFO] Ê≠£Âú®ÂÆâË£ÖVScodeÊèí‰ª∂Ôºöcph
 start /wait /b powershell code --install-extension DivyanshuAgrawal.competitive-programming-helper>nul 2>nul
-echo [INFO] ’˝‘⁄∞≤◊∞VScode≤Âº˛£∫codegeex
+echo [INFO] Ê≠£Âú®ÂÆâË£ÖVScodeÊèí‰ª∂Ôºöcodegeex
 start/wait  /b powershell code --install-extension aminer.codegeex>nul 2>nul
-echo [INFO] ’˝‘⁄∞≤◊∞VScode≤Âº˛£∫errorlens
+echo [INFO] Ê≠£Âú®ÂÆâË£ÖVScodeÊèí‰ª∂Ôºöerrorlens
 start /wait /b powershell code --install-extension usernamehw.errorlens>nul 2>nul
 
 explorer "%appdata%\..\Local\Programs\Microsoft VS Code\code.exe"
 ping -n 4 127.0.0.1>nul
 taskkill /f /im code.exe>nul 2>nul
 
-powershell "[system.Reflection.Assembly]::LoadWithPartialName('System.Windows.Forms') | Out-Null;$balloon = New-Object System.Windows.Forms.NotifyIcon;$path = Get-Process -id $pid | Select-Object -ExpandProperty Path;$icon = [System.Drawing.Icon]::ExtractAssociatedIcon($path);$balloon.Icon = $icon;$balloon.BalloonTipIcon = 'Info';$balloon.BalloonTipText = '∞≤◊∞ÕÍ±œ';$balloon.BalloonTipTitle = 'VScode ◊‘∂Ø≈‰÷√Ω≈±æ';$balloon.Visible = $true;$balloon.ShowBalloonTip(1)"
+powershell "[system.Reflection.Assembly]::LoadWithPartialName('System.Windows.Forms') | Out-Null;$balloon = New-Object System.Windows.Forms.NotifyIcon;$path = Get-Process -id $pid | Select-Object -ExpandProperty Path;$icon = [System.Drawing.Icon]::ExtractAssociatedIcon($path);$balloon.Icon = $icon;$balloon.BalloonTipIcon = 'Info';$balloon.BalloonTipText = 'ÂÆâË£ÖÂÆåÊØï';$balloon.BalloonTipTitle = 'VScode Ëá™Âä®ÈÖçÁΩÆËÑöÊú¨';$balloon.Visible = $true;$balloon.ShowBalloonTip(1)"
 
 explorer "%appdata%\..\Local\Programs\Microsoft VS Code\code.exe"
