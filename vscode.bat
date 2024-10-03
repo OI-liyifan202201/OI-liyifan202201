@@ -4,9 +4,9 @@ color e3
 
 cls
 
-echo VScode C++ 自动安装脚本
+echo VScode C++ �Զ���װ�ű�
 
-echo 本程序由 liyifan202201 开发，
+echo �������� liyifan202201 ������
 
 echo ---
 
@@ -14,15 +14,15 @@ md C:\VSc-cpp>nul 2>nul
 
 if exist C:\VSc-cpp\install-ok.txt goto ainstall
 
-echo [Start] 正在下载 Vscode ...
+echo [Start] �������� Vscode ...
 
 powershell Invoke-WebRequest -Uri \"https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-user\"  -OutFile VSC.exe
 
 echo [Success] OK
 
-echo [Start] 正在安装 Vscode ...
+echo [Start] ���ڰ�װ Vscode ...
 
-echo [INFO] 不要急，在后台安装...
+echo [INFO] ��Ҫ�����ں�̨��װ...
 
 VSC.exe /VERYSILENT /SP-
 
@@ -38,13 +38,13 @@ echo IAKIOI >> C:\VSc-cpp\install-ok.txt
 
 if exist C:\VSc-cpp\insMinGW-ok.txt goto binstall
 
-echo [Start] 正在下载 MinGW64
+echo [Start] �������� MinGW64
 
 powershell Invoke-WebRequest -Uri \"https://github.moeyy.xyz/https://github.com/Github-liyifan202201/Github-liyifan202201/releases/download/v1.0/MinGW-64.zip\"  -OutFile MinGW.zip
 
 echo [Success] OK
 
-echo [Start] 正在解压 MinGW64
+echo [Start] ���ڽ�ѹ MinGW64
 
 powershell Expand-Archive -Path MinGW.zip -DestinationPath C:\VSc-cpp\MinGW\
 
@@ -56,7 +56,7 @@ del MinGW.zip>nul 2>nul
 
 
 
-echo [Start] 正在设置 path
+echo [Start] �������� path
 
 for /f "tokens=2,*" %%A in ('reg query HKCU\Environment /v PATH 2^>nul') do set my_user_path=%%B
 
@@ -118,20 +118,31 @@ goto main
 
 :binstall
 
-echo [Start] 正在设置插件
-echo [INFO] 正在安装VScode插件：汉化
+echo [Start] �������ò��
+echo [INFO] ���ڰ�װVScode���������
 start /wait /b powershell code --install-extension MS-CEINTL.vscode-language-pack-zh-hans>nul 2>nul
 
 echo { "locale": "zh-cn", "enable-crash-reporter": false} > %USERPROFILE%\.vscode\argv.json
 
-echo [INFO] 正在安装VScode插件：C++
+echo [INFO] ���ڰ�װVScode�����C++
 start /wait /b powershell code --install-extension ms-vscode.cpptools-extension-pack>nul 2>nul
 start /wait /b powershell code --install-extension ms-vscode.cpptools>nul 2>nul
-echo [INFO] 正在安装VScode插件：洛谷
+echo [INFO] ���ڰ�װVScode��������
 start /wait /b powershell code --install-extension yltx.vscode-luogu>nul 2>nul
-echo [INFO] 正在安装VScode插件：cph
+echo [INFO] ���ڰ�װVScode�����cph
 start /wait /b powershell code --install-extension DivyanshuAgrawal.competitive-programming-helper>nul 2>nul
-echo [INFO] 正在安装VScode插件：codegeex
+echo [INFO] ���ڰ�װVScode�����codegeex
+start/wait  /b powershell code --install-extension aminer.codegeex>nul 2>nul
+echo [INFO] ���ڰ�װVScode�����errorlens
+start /wait /b powershell code --install-extension usernamehw.errorlens>nul 2>nul
+
+explorer "%appdata%\..\Local\Programs\Microsoft VS Code\code.exe"
+ping -n 4 127.0.0.1>nul
+taskkill /f /im code.exe>nul 2>nul
+
+powershell "[system.Reflection.Assembly]::LoadWithPartialName('System.Windows.Forms') | Out-Null;$balloon = New-Object System.Windows.Forms.NotifyIcon;$path = Get-Process -id $pid | Select-Object -ExpandProperty Path;$icon = [System.Drawing.Icon]::ExtractAssociatedIcon($path);$balloon.Icon = $icon;$balloon.BalloonTipIcon = 'Info';$balloon.BalloonTipText = '��װ���';$balloon.BalloonTipTitle = 'VScode �Զ����ýű�';$balloon.Visible = $true;$balloon.ShowBalloonTip(1)"
+
+explorer "%appdata%\..\Local\Programs\Microsoft VS Code\code.exe"
 start/wait  /b powershell code --install-extension aminer.codegeex>nul 2>nul
 echo [INFO] 正在安装VScode插件：errorlens
 start /wait /b powershell code --install-extension usernamehw.errorlens>nul 2>nul
