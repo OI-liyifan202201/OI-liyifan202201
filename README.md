@@ -1,4 +1,4 @@
-这个人很懒[$\color{white}\text{，}$](https://www.luogu.com.cn/paste/qui6pzfz)什么都没写
+这个人很懒[ $\color{white}\text{，}$ ](https://www.luogu.com.cn/paste/qui6pzfz)什么都没写
 
 
 <!---
