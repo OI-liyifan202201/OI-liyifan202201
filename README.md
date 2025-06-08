@@ -5,7 +5,53 @@
 ---
 
 
-$\small\texttt{\color{#FA4129}本}\huge\texttt{\color{#FE9019}人}_{\small\texttt{\color{#FFE304}的}^{\large\texttt{\color{#FFEC01}萌\color{#FFF900}新}\small\texttt{\color{#FCFB03}Q\color{#F8FB07}A\color{#F1FB0B}Q}}}^{\large\texttt{\color{#FFB511}是}{\small\texttt{\color{#FFDC07}刚\color{#FFEF00}学}\large\texttt{\color{#FFF600}O\color{#FFFA00}I}}}\huge\texttt{\color{#E6F911}但\color{#92E82F}是}^{\large\texttt{\color{#39D54B}即}{\small\texttt{\color{#03C767}使}}}_{\normalsize\text{\color{#07C964}是\color{#00C789}这\color{#00C7A5}样}}\texttt{\color{#00CBC6}我\color{#00D0EB}也}^{\small\texttt{\color{#00D0F2}要}\normalsize\texttt{\color{#00D0F6}用}\texttt{\color{#03BEF4}蒟}_{\texttt{\color{#04AAEF}蒻}\large\texttt{\color{#078DE4}的}}}_{\scriptsize\texttt{\color{#01CDF6}声\color{#03C2F5}音\color{#04B4F2}大\color{#04A7EE}声\color{#0791E6}喊\color{#0A7BDD}出}}\mathcal{\color{#125BCD}I \color{#3D2AB5}AK \color{#A011AD}IOI}$
+<div style="font-family: 'Segoe UI', sans-serif; font-weight: bold; font-size: 24px; line-height: 1.8;">
+  <span style="color:#FA4129;">本</span>
+  <span style="color:#FE9019; font-size: 36px;">人</span>
+  <sub>
+    <span style="color:#FFE304;">的</span>
+    <span style="color:#FFEC01; font-size: 24px;">萌</span>
+    <span style="color:#FFF900; font-size: 24px;">新</span>
+    <span style="color:#FCFB03;">Q</span>
+    <span style="color:#F8FB07;">A</span>
+    <span style="color:#F1FB0B;">Q</span>
+  </sub>
+  <sup>
+    <span style="color:#FFB511; font-size: 24px;">是</span>
+    <span style="color:#FFDC07;">刚</span>
+    <span style="color:#FFEF00;">学</span>
+    <span style="color:#FFF600; font-size: 24px;">O</span>
+    <span style="color:#FFFA00; font-size: 24px;">I</span>
+  </sup>
+  <span style="color:#E6F911; font-size: 36px;">但</span>
+  <span style="color:#92E82F; font-size: 36px;">是</span>
+  <sup>
+    <span style="color:#39D54B; font-size: 24px;">即</span>
+    <span style="color:#03C767;">使</span>
+  </sup>
+  <sub style="font-size: 14px; color:#07C964;">是</sub>
+  <sub style="font-size: 14px; color:#00C789;">这</sub>
+  <sub style="font-size: 14px; color:#00C7A5;">样</sub>
+  <span style="color:#00CBC6;">我</span>
+  <span style="color:#00D0EB;">也</span>
+  <sup>
+    <span style="color:#00D0F2;">要</span>
+    <span style="color:#00D0F6;">用</span>
+    <span style="color:#03BEF4;">蒟</span>
+    <span style="color:#04AAEF; font-size: 22px;">蒻</span>
+    <span style="color:#078DE4; font-size: 24px;">的</span>
+  </sup>
+  <sub style="font-size: 12px; color:#01CDF6;">声</sub>
+  <sub style="font-size: 12px; color:#03C2F5;">音</sub>
+  <sub style="font-size: 12px; color:#04B4F2;">大</sub>
+  <sub style="font-size: 12px; color:#04A7EE;">声</sub>
+  <sub style="font-size: 12px; color:#0791E6;">喊</sub>
+  <sub style="font-size: 12px; color:#0A7BDD;">出</sub>
+  <span style="font-family: 'Cascadia Code', monospace; font-size: 28px; color:#125BCD;">I </span>
+  <span style="font-family: 'Cascadia Code', monospace; font-size: 28px; color:#3D2AB5;">AK </span>
+  <span style="font-family: 'Cascadia Code', monospace; font-size: 28px; color:#A011AD;">IOI</span>
+</div>
+
 
 
 ---
