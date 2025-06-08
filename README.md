@@ -55,112 +55,142 @@
 
 
 ---
-$\color{#00B8D4}
-\rule{2pt}{44pt}
-\color{#E5F8FB}
-\rule[24pt]{190pt}{20pt}
-\color{#e8e8e8}\rule{0.5pt}{44pt}
-\color{#f5f5f5}\rule{0.5pt}{44pt}
-\color{#fafafa}\rule{0.5pt}{44pt}
-\kern{-190pt}\kern{-1.5pt}
-\color{#bfbfbf}\rule[0pt]{190pt}{0pt}\kern{-190pt}
-\color{#d6d6d6}\rule[-0.5pt]{190pt}{0pt}\kern{-190pt}
-\color{#ececec}\rule[-1pt]{190pt}{0pt}\kern{-190pt}
-\color{#f8f8f8}\rule[-1.5pt]{190pt}{0pt}\kern{-190pt}
-\color{black}
-\raisebox{24pt}{ \raisebox{6pt}{ \kern{-1pt}
-\color{#00B8D4}\large{\kern{2pt}\bf{i}\kern{5.5pt}}
-\raisebox{1.5pt}{ \color{#404040}\footnotesize
-\kern{-4pt}\sf\bf{欢迎来到我的主页！}
-}}}\kern{-200pt}$.
-$\kern{4pt}\raisebox{10pt}{\footnotesize\sf{我的小秘密：}}$
-$\def\w{130pt}
-\def\h{18pt}
-\color{#E4E7E8}
-\rule[3pt]{0.1pt}{\h}\kern{-0.5pt}
-\rule[21pt]{\w}{0pt}
-\rule[3pt]{0.1pt}{\h}\kern{-\w}
-\color{#0067C0}
-\rule[3pt]{\w}{0.5pt}\kern{-\w}
-\color{#616161}
-\raisebox{10.2pt}
-{\scriptsize\sf\kern{5pt}您是大佬
-}$
 
-$% w, h, fillcol, bordercol
-\newcommand\BorderRect[4]{
-  \color{#3}\rule{#1}{#2}\kern{-#1}
-  \color{#4}\rule{0.5px}{#2}\kern{-0.5px}
-  \rule{#1}{0px}\rule{0.5px}{#2}\kern{-0.5px}
-  \kern{-#1}\rule[#2]{#1}{0px}
-}
-% w, h, title, subtitle, fillcol, iconch ,iconcol
-\newcommand\BasicInfoBarFather[8]{
-  \BorderRect{#1}{#2}{#5}{ghostwhite}
-  \kern{-#1}
-  \raisebox{#2}{
-    \raisebox{-26pt}{
-      \color{black}\kern{-4px}
-      \raisebox{7px}{
-        \color{#7}\Huge{∙}\kern{-1px}
-      }
-      \raisebox{10.6px}{
-        \kern{-20.2px}
-        \color{white}\scriptsize\textbf{#6}
-      }
-      \kern{-7px}\footnotesize
-      \raisebox{10.2px}{\textbf{\textsf{\color{#8}#3}}}\kern{2px}
-      \raisebox{10.2px}{\textsf{#4}}
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>欢迎来到我的主页！</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #ffffff;
+      margin: 20px;
+      color: #333;
     }
-  }
-}
-\def\BasicInfoBarColorFill{#F4F4F4}\def\BasicInfoBarColorIcon{#0078D4}
-\def\BasicWarnBarColorFill{#FFF4CE}\def\BasicWarnBarColorIcon{#9D5D00}
-\def\BasicOkBarColorFill{#DFF6DD}\def\BasicOkBarColorIcon{#0F7B0F}
-\def\BasicErrBarColorFill{#FDE7E9}\def\BasicErrBarColorIcon{#C42B1C}
-\newcommand\BasicInfoBar[5]{
-  \BasicInfoBarFather{#1}{#2}{#3}{#4}
-  {\BasicInfoBarColorFill}{i}{\BasicInfoBarColorIcon}{\BasicInfoBarColorIcon}
-}
-\newcommand\BasicWarnBar[5]{
-  \BasicInfoBarFather{#1}{#2}{#3}{#4}
-  {\BasicWarnBarColorFill}{i}{\BasicWarnBarColorIcon}{\BasicWarnBarColorIcon}
-}
-\newcommand\BasicOkBar[5]{
-  \BasicInfoBarFather{#1}{#2}{#3}{#4}
-  {\BasicOkBarColorFill}
-  {\tiny\kern{-2px}\raisebox{0.8px}{√}}
-  {\BasicOkBarColorIcon}{\BasicOkBarColorIcon}
-}
-\newcommand\BasicErrBar[5]{
-  \BasicInfoBarFather{#1}{#2}{#3}{#4}
-  {\BasicErrBarColorFill}
-  {\kern{-2px}\raisebox{0.6px}{×}}
-  {\BasicErrBarColorIcon}{\BasicErrBarColorIcon}
-}
-\BasicWarnBar{200px}{26px}{警告}{此人钛蒻了，请小心}{#000000}\\
-\BasicInfoBar{200px}{26px}{提醒}{近墨者黑}{#000000}\\
-\BasicErrBar{200px}{26px}{请勿}{膜拜我}{#000000}\\
-\BasicOkBar{200px}{26px}{应该}{疯狂嘲讽并踩爆这个蒟蒻}{#000000}\\$
+    .bar {
+      display: flex;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+    .bar-icon {
+      width: 2px;
+      height: 44px;
+      background-color: #00B8D4;
+    }
+    .bar-main {
+      width: 190px;
+      height: 44px;
+      background-color: #E5F8FB;
+      margin-left: 8px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      padding-top: 24px;
+      padding-left: 8px;
+      position: relative;
+    }
+    .bar-main span.icon {
+      color: #00B8D4;
+      font-size: 18px;
+      font-weight: bold;
+      margin-right: 6px;
+    }
+    .bar-main span.text {
+      color: #404040;
+      font-size: 12px;
+      font-weight: bold;
+    }
+    .info-box {
+      margin: 10px 0;
+      padding: 6px 10px;
+      border-left: 5px solid;
+      width: 200px;
+    }
+    .warn {
+      background-color: #FFF4CE;
+      border-color: #9D5D00;
+    }
+    .info {
+      background-color: #F4F4F4;
+      border-color: #0078D4;
+    }
+    .err {
+      background-color: #FDE7E9;
+      border-color: #C42B1C;
+    }
+    .ok {
+      background-color: #DFF6DD;
+      border-color: #0F7B0F;
+    }
+    .feedback {
+      margin-top: 30px;
+    }
+    .button {
+      background-color: #3bb4f2;
+      color: white;
+      padding: 3px 6px;
+      border-radius: 3px;
+      font-size: 12px;
+    }
+    .gray-box {
+      background-color: #dedede;
+      color: black;
+      display: inline-block;
+      padding: 4px 6px;
+      border-radius: 4px;
+      margin-top: 8px;
+    }
+    .actions {
+      margin-top: 10px;
+      color: #0e90d2;
+      font-size: 12px;
+    }
+    .actions span {
+      margin: 0 4px;
+    }
+  </style>
+</head>
+<body>
 
+  <div class="bar">
+    <div class="bar-icon"></div>
+    <div class="bar-main">
+      <span class="icon">i</span>
+      <span class="text">欢迎来到我的主页！</span>
+    </div>
+  </div>
 
----
-$$\bold{\text{反馈}}$$
+  <div style="font-size: 12px; margin-bottom: 10px;"><strong>我的小秘密：</strong>您是大佬</div>
 
-$$\small\text{如果你认为某个同学有问题，欢迎向洛谷反馈，以帮助更多的同学。}$$
+  <div class="info-box warn">⚠ 警告：此人钛蒻了，请小心</div>
+  <div class="info-box info">ℹ 提醒：近墨者黑</div>
+  <div class="info-box err">✖ 请勿：膜拜我</div>
+  <div class="info-box ok">✔ 应该：疯狂嘲讽并踩爆这个蒟蒻</div>
 
-$$\colorbox{#3bb4f2}{\color{white}举报用户：liyifan202201} $$
-$$\small\text{请具体说明理由，以增加反馈的可信度。}$$  
-$$\color{#dedede}\boxed{\color{black}\text{ 此人太菜了，严重拉低洛谷平均水平\~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}}$$
+  <div class="feedback">
+    <h3>反馈</h3>
+    <p style="font-size: 12px;">如果你认为某个同学有问题，欢迎向洛谷反馈，以帮助更多的同学。</p>
+    <div class="button">举报用户：liyifan202201</div>
+    <p style="font-size: 12px;">请具体说明理由，以增加反馈的可信度。</p>
+    <div class="gray-box">此人太菜了，严重拉低洛谷平均水平~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</div>
+    <div class="actions">
+      <span>取消</span>|
+      <span>确定</span>
+    </div>
+  </div>
 
-$$\small\color{#0e90d2}\text{取消~~~~~~~~~~~~~~~~~~~~~~~~}\color{#dedede}\text{|}\color{#0e90d2}\text{~~~~~~~~~~~~~~~~~~~~~~~~确定}$$
-$$$$
+  <div class="feedback">
+    <h3>提示</h3>
+    <p style="font-size: 12px;">举报成功，感谢您的反馈</p>
+    <div class="actions">
+      <span>确定</span>
+    </div>
+  </div>
 
-****
+</body>
+</html>
 
-$$\bold{\text{提示}}$$
-$$\small\text{举报成功，感谢您的反馈}$$
-$$\small\color{#0e90d2}\text{确定}$$
 
 ![](https://i.loli.net/2018/08/13/5b715db54cdc3.gif)
 ![](https://i.loli.net/2018/08/13/5b715db54cdc3.gif)
