@@ -10,12 +10,19 @@
 ---
 ![](https://pic1.zhimg.com/v2-21141e8b0ff0572082c70988677c4d58_1440w.png)
 
+--- 
+
 一个程序员碰到了一个问题，他决定用多线程来解决。现在两个他问题了有
 
+---
 
 ![](https://pic1.zhimg.com/v2-3ef028de53a63a42d75d026ed892b8fc_1440w.png)
 
 ![](https://pic2.zhimg.com/v2-85082c409603efa21c79d1b5b41fb0ef_1440w.png)
+
+
+---
+
 
 
 
